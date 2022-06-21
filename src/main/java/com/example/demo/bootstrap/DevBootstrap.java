@@ -23,9 +23,11 @@ public class DevBootstrap{
     @EventListener(ContextRefreshedEvent.class)
     public void initData() {
         Author robertMartin = new Author("Robert", "MARTIN", LocalDate.of(1952, Month.DECEMBER, 5));
+        Author fakeAuthor = new Author("Dean", "WAMPLER", LocalDate.of(1960, Month.JANUARY, 28));
         Publisher pearson = new Publisher("Pearson");
         Book cleanCode = new Book("Clean Code", "9780132350884");
         cleanCode.getAuthors().add(robertMartin);
+        cleanCode.getAuthors().add(fakeAuthor);
         cleanCode.getPublishers().add(pearson);
 
         Author craigWalls = new Author("Craig", "WALLS", LocalDate.of(1965, Month.FEBRUARY, 12));
